@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import GlobalContext from '../GlobalContext'
 import React, { useContext } from 'react'
+import Image from 'next/image';
 
 export default function CartDrawer() {
   const {globals,setGlobals} = useContext(GlobalContext);
@@ -39,10 +40,10 @@ export default function CartDrawer() {
   };
   const CartItemsList = () => {
     return globals.cartItems.map((product)=> 
-                   (<li className="flex py-6">
+                   (<li key={product.id} className="flex py-6">
                       <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                        <img src={product.image} alt="Clothes orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
-                      </div>
+                        <Image src={product.image} alt="Clothes orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt." className="h-full w-full object-cover object-center" />
+             a         </div>
 
                       <div className="ml-4 flex flex-1 flex-col">
                         <div>

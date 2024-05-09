@@ -30,6 +30,7 @@ export default async function page() {
           className="absolute end-1 top-1/2 -translate-y-1/2 rounded-full  p-2 text-gray-600 transition hover:text-gray-700"
         >
           <span className="sr-only">Search</span>
+          <div>SJSKO TESST</div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-4 w-4"
